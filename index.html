@@ -94,6 +94,36 @@
 }
 
 
+/* Dark mode styling */
+.dark-mode {
+  background-color: #121212;
+  color: #f1f1f1;
+}
+.dark-mode input,
+.dark-mode table,
+.dark-mode th,
+.dark-mode td {
+  background-color: #1e1e1e;
+  color: white;
+  border-color: #444;
+}
+.dark-mode th {
+  background-color: #333;
+}
+#darkToggle {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #333;
+  color: white;
+  padding: 8px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  z-index: 999;
+}
+
+
 thead th:first-child {
   border-top-left-radius: 12px;
 }
@@ -168,5 +198,13 @@ thead th:last-child {
       }
     });
   </script>
+
+<button id="darkToggle">🌙 Karanlık Mod</button>
+<script>
+  document.getElementById("darkToggle").addEventListener("click", function () {
+    document.body.classList.toggle("dark-mode");
+  });
+</script>
+
 </body>
 </html>
